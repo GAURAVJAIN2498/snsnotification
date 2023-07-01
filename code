@@ -1,0 +1,12 @@
+import boto3
+mysns  = boto3.client("sns")
+
+def lw(x, y):
+    
+    mysns.publish(
+        TopicArn='arn:aws:sns:us-east-1:686126355457:mysnsnotification',
+        Message='something is uploaded',
+        Subject='i got new document in s3',
+        
+        )
+print(' hello gaurav this side from s3 bucket. i give you pop up from sns.!')
